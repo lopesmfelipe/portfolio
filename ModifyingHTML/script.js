@@ -17,6 +17,5 @@ function toEnter2(name, age) {
     var tex = prompt('Type your lastName');
     area.innerHTML = "Welcome " + name + " " + tex + " you are " + age + " years old.";
 
-
 }
 
