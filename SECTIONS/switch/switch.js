@@ -1,11 +1,10 @@
-//Switch
-
 document.write("</br> Escolha seu pedido: </br>");
 document.write("</br> 0 - Computer </br>");
 document.write("</br> 2 - Laptop </br>");
+document.write("</br>")
 
 
-function order() {
+function pedi(){
 
     x = prompt("What is the order?");
 
@@ -20,9 +19,11 @@ function order() {
         case "2":
             alert("x = " + x);
             break;
+        default:
+            alert("We can't find that order")
+            break;
     
     }
-
 
 
 }
