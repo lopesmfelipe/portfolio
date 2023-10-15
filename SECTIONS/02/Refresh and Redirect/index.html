@@ -5,10 +5,26 @@
 </head>
 <body>
 
-    how much money do you make?
+    <div id="area">
+        Welcome...
+    </div>
 
-    <button onclick="window.location.href='contact.html'; ">Go to the programmer</button>
+    <br><br/>
 
-    <button onclick="window.location.href= window.location.href " >Update page</button>
+    <button onclick="document.getElementById('area').innerHTML = 
+    'Welcome ' + prompt('What is your name?') + '!'; ">Enter</button>
+
+
+    <!------------------------->
+    <br><br/>
+
+    <div id="area">
+        Welcome...
+    </div>
+
+    <br><br/>
+
+    <button onclick="this.innerHTML = prompt('What is the button name?');">What is my name?</button>
+
 </body>
 </html>
