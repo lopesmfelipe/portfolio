@@ -20,7 +20,7 @@ function pedi(){
             alert("x = " + x);
             break;
         default:
-            alert("We can't find that order")
+            alert("We can't find this order")
             break;
     
     }
