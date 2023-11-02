@@ -11,10 +11,10 @@ function pedi(){
     switch(x){
     
         case "0":
-            alert("x = " + x);
+            alert("y = " + x);
             break;
         case "1":
-            alert("x = " + x);
+            alert("y = " + x);
             break;
         case "2":
             alert("x = " + x);
