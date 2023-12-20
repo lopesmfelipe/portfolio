@@ -14,7 +14,7 @@ function pedi(){
             alert("y = " + x);
             break;
         case "1":
-            alert("y = " + x);
+            alert("y = " + "hello");
             break;
         case "2":
             alert("x = " + x);
