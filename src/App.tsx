@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <Job salary={75000} position="Junior FullStack Developer" company="IBM" />
       <Job salary={120000} position="Mid Level FullStack Developer" company="Twitch" />
-      <Job salary={500000} position="TechLead" company="Amazon" />
+      <Job salary={600000} position="TechLead" company="Amazon" />
     </div>
   );
 }
