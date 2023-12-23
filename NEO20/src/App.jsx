@@ -1,26 +1,22 @@
 import "./App.css";
-import { Planet } from "./Planet";
+import { useState } from "react";
 
 function App() {
-
-  const planets = [
-    { name: "Mars", isGasPlanet: false },
-    { name: "Earth", isGasPlanet: false },
-    { name: "Jupiter", isGasPlanet: true },
-    { name: "Venus", isGasPlanet: false },
-    { name: "Neptune", isGasPlanet: true },
-    { name: "Uranus", isGasPlanet: true },
-  ];
+  const [textColor, setTextColor] = useState("lightpink"); 
 
 
   return (
     <div className="App">
-        {planets.map((planet, key) => (
-          !planet.isGasPlanet && <Planet name={planet.name} />     
-      ))}
+      <button 
+        onClick={() => {
+          setTextColor(textColor === "lightpink" ? "lightblue" :  "lightpink");
+        }}
+      >
+        Change-Colors
+      </button>
+      <h1 style={{color: textColor}}> HELLO HUMAN BEING</h1>
     </div>
   );
 }
 
-export default App
-
+export default App;
