@@ -1,23 +1,26 @@
 import "./App.css";
-import {User} from "./User";
+import { Planet } from "./Planet";
 
 function App() {
 
-  return ( 
+  const planets = [
+    { name: "Mars", isGasPlanet: false },
+    { name: "Earth", isGasPlanet: false },
+    { name: "Jupiter", isGasPlanet: true },
+    { name: "Venus", isGasPlanet: false },
+    { name: "Neptune", isGasPlanet: true },
+    { name: "Uranus", isGasPlanet: true },
+  ];
+
+
+  return (
     <div className="App">
-      {users.map((user, key) => {
-        return <User name={user.name} age={user.age} />;
-      })}
+        {planets.map((planet, key) => (
+          !planet.isGasPlanet && <Planet name={planet.name} />     
+      ))}
     </div>
   );
 }
 
-const users = [ 
-  { name: "Kakashi Hatake", age: 33 },
-  { name: "Hiruzen Sarutobi", age: 68},
-  { name: "Tobirama Senju", age: 42}
-];
-
-
-
 export default App
+
