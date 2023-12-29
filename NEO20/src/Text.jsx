@@ -10,7 +10,7 @@ export const Text = () => {
     return () => {
       console.log("COMPONENT UNMOUNTED");
     };
-  }, []);
+  }, [text]);
 
   return (
     <div>
