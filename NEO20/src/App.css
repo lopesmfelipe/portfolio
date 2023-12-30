@@ -10,11 +10,15 @@ body {
 }
 
 button {
+  height: 50px;
+  width: 200px;
   color: white;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;  
   background-color: rgb(226, 0, 106);
   margin-right: 10px;
+  border: 0;
+  border-radius: 6px;
 }
 
 input {

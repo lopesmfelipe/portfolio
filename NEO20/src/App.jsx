@@ -1,21 +1,16 @@
-import { useState } from "react";
 import "./App.css";
-import { Text } from "./Text";
 
 function App() {
-  const [showMyText, setMyShowText] = useState(false);
+  fetch("https://catfact.ninja/fact")
+    .then((myResponse) => myResponse.json())
+    .then((data) => {
+      console.log(data);
+    });
 
   return (
     <div className="App">
-      <button
-        onClick={() => {
-          setMyShowText(!showMyText);
-        }}
-      >
-        Show My Text
-      </button>
-
-      {showMyText && <Text />}
+      <button> Generate some cat fact</button>
+      <p></p>
     </div>
   );
 }
