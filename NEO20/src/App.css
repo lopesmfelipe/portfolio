@@ -31,3 +31,7 @@ h1 {
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+p {
+  color: white;
+}
