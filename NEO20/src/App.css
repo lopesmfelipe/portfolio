@@ -32,6 +32,10 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h2 {
+  color:rgb(226, 0, 106)
+}
+
 p {
   color: white;
 }
