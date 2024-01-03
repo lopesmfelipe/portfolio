@@ -22,7 +22,7 @@ function App() {
       />
       <button onClick={fetchData}> Predict the Age</button>
 
-      <h1> Name = {predictedAge?.name}</h1>
+      <h1> Name = {pred ictedAge?.name}</h1>
       <h1> Predicted Age = {predictedAge?.age}</h1>
       <h1> Count = {predictedAge?.count}</h1>
     </div>
