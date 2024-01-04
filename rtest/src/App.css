@@ -26,3 +26,8 @@ h1 {
   color: rgb(166, 0, 243);
 }
 
+.errorText {
+  color: rgb(207, 0, 0);
+  font-size: 200px;
+}
+
