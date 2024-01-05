@@ -6,6 +6,9 @@ import { Contact } from "./pages/Contact";
 import { Navbar } from "./Navbar";
 import { useState, createContext } from "react";
 
+
+
+
 export const AppContext = createContext();
 
 function App() {
