@@ -7,20 +7,32 @@ import { Navbar } from "./Navbar";
 import { useState } from "react";
 
 function App() {
-  const [userName, setUsername] = useState("");
+
+  const ParentComponent = () => {
+    const [state, setState] = useState();
+    return (
+      <div>
+        <SonComponent state={state} />
+      </div>
+    );
+  };
+
+  const SonComponent = () => {
+    return (
+      <div>
+        <GrandparentComponent state={state}/>
+      </div>
+    );
+  };
+
+  const GrandparentComponent = (state) => {
+    return <div> {state} </div>;
+  };
 
   return (
     <div className="App">
-      <Router>
-        <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<h1 className="errorText"> ERROR 404 </h1>} />
-        </Routes>
-      </Router>
+
     </div>
   );
 }
