@@ -4,10 +4,11 @@ import { AppContext } from "../App";
 
 export const Profile = () => {
   const { username, setUsername } = useContext(AppContext);
+  
   return (
     <div className="profileText">
       PROFILE PAGE USER: {username}
-      <ChangeProfile setUsername={setUsername} />
+      <ChangeProfile />
     </div>
   );
 };
