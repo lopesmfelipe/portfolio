@@ -1,3 +1,10 @@
-export const Home = () => {
-  return <h1 className="homeText">The Great Futuristic Home Page</h1>;
+export const Home = (props) => {
+  return (
+    <>
+      <h1 className="homeText">HOME PAGE</h1>
+      <h1> {props.username} </h1>;
+    </>
+  );
+    
+   
 };
