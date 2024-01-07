@@ -2,32 +2,12 @@ body {
   background-color: rgb(35, 35, 35);
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+input {
+  display: block;
+  margin-bottom: 20px;
 }
 
-h1 {
-  color: white;
-  font-family: monospace;
+p {
+  color: rgb(243, 2, 2);
+  font-family:'Courier New', Courier, monospace;
 }
-
-.homeText {
-  color: rgb(223, 0, 134);
-}
-
-.profileText {
-  color: rgb(0, 225, 180);
-}
-
-.contactText {
-  color: rgb(228, 84, 0);
-}
-
-.errorText {
-  color: rgb(207, 0, 0);
-  font-size: 200px;
-}
-
