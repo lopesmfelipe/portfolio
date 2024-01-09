@@ -1,8 +1,6 @@
 import "./App.css";
-import { useState } from "react";
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div className="App">
