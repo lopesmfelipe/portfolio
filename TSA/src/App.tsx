@@ -1,16 +1,24 @@
 import "./App.css";
-import { Person } from "./components/Person";
+import { Person, Country } from "./components/Person";
 
 function App() {
+
+  const job = {
+    position: "Senior Developer",
+    company: "Google",
+  };
+
   return (
     <div className="App">
       <Person 
         name="Bryan"
         email="bryan@gmail.com"
         age={26}
-        isMarried={true}
+        isMarried={false}
         friends={["Toreto", "Han", "The Rock"]}
+        country={Country.Canada}
       />
+      <h1>{job.company}</h1>
     </div>
   ); 
 }
