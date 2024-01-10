@@ -3,6 +3,10 @@ import { Cat } from "./components/Cat";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
+  
+  
+  
+  /*
   const client = new QueryClient({
     defaultOptions: {
       queries: {
@@ -18,6 +22,7 @@ function App() {
       </QueryClientProvider>
     </div>
   );
+   */
 };
 
 export default App;
