@@ -9,7 +9,7 @@ export const Cat = () => {
     return (
       <div>
         <button onClick={refetchData}> refetch </button>
-        <h1> {data?.fact} </h1>
+        <h1> {data.fact} </h1>
       </div>
     );
   }
