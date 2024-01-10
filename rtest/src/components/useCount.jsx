@@ -1,19 +1,23 @@
 import { useState } from "react";
 
-export const useCount = (initialVal = 0) => {
-  const [count, setCount] = useState(initialVal);
+export const useCount = (currentVal) => {
+  const [count, setCount] = useState(currentVal);
 
   const increase = () => {
-    setCount((prev) => prev + 1);
+    setCount((currentVal) => currentVal + 1);
   };
 
   const decrease = () => {
-    setCount((prev) => prev - 1);
+    setCount((currentVal) => currentVal - 1);
   };
 
   const restart = () => {
-    setCount((prev) => initialVal);
+    setCount(currentVal);
   };
 
-  return { count, increase, decrease, restart };
+  const reset = () => {
+    setCount((currentVal) => currentVal = "So the state(currentVal) was a number and now it's a string");
+  };
+
+  return { count, increase, decrease, restart, reset };
 };

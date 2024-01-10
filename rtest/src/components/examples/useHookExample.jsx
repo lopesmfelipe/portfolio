@@ -1,19 +1,25 @@
 import { useState } from "react";
 
-export const useHookExample = (initialVal = 0) => {
-  const [count, setCount] = useState(initialVal); // -> state called count
+export const useHookExample = (currentVal) => {
+  
+  const [count, setCount] = useState(currentVal); // -> state called count
   
   const increase = () => {
-    setCount((prev) => prev + 1);
+    setCount((currentVal) => currentVal + 1);
   };
 
   const decrease = () => {
-    setCount((prev) => prev - 1);
+    setCount((currentVal) => currentVal - 1);
   };
 
   const restart = () => {
-    setCount((prev) => initialVal);
+    setCount(currentVal);
   };
+  
+  const reset = () => {
+    setCount((currentVal) => currentVal = "The current value now is string");  // as you can see here, we can change the type of the current that was a number, and change it to a string like this phrase
+  }
+
 
   return { count, increase, decrease, restart }; // return the state(count), and the other 3 functions 
 };
@@ -24,9 +30,9 @@ CODE BREAKDOWN:
   
   
 1. you create a hook(basically a function that starts with 'use' but can use *state* and
-other React features) and then pass a prop ('initialVal = 0')
+other React features) and then can receive a prop ('currentVal')
 
-2. you create a state and the initial value in this case is 'initialVal' which is the number 0 
+2. you create a state and pass the value (in this case it's 'currentVal' which in the App component you can set as a number like 1000)
 
 3. And then you create three functions to change the state('count') value, using the setCount on all of them 
 
