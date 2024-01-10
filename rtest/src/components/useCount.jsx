@@ -12,7 +12,7 @@ export const useCount = (initialVal = 0) => {
   };
 
   const restart = () => {
-    setCount((prev) => 0);
+    setCount((prev) => initialVal);
   };
 
   return { count, increase, decrease, restart };

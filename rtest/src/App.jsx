@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useCount } from "./components/useCount";
 
 function App() {
-  const { count, increase, decrease, restart } = useCount();
+  const { count, increase, decrease, restart } = useCount(10);
   return (
     <div className="App">
       {count}
