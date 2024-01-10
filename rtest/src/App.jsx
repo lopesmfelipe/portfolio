@@ -4,7 +4,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
   
-  
+  return (
+
+    <div>
+      <button onClick={increase}> increase </button>
+      <button onClick={increase}> increase </button>
+      <button onClick={increase}> increase </button>
+    </div>
+  );
   
   /*
   const client = new QueryClient({
