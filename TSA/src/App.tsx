@@ -2,28 +2,26 @@ import "./App.css";
 import { Person, Country, Setup } from "./components/Person";
 
 function App() {
-
-  
-
-  const job = {
-    position: "Senior Developer",
-    company: "Google",
+  const getAge = (name: string): number => {
+    return 99;
   };
 
   return (
     <div className="App">
-      <Person 
-        name="Bryan"
-        email="bryan@gmail.com"
+      <Person
+        name="Jack Chan"
         age={26}
         isMarried={false}
-        friends={["Toreto", "Han", "The Rock"]}
+        friends={[
+          { name: "Steve Jobs", email: "stevejobs@apple.com", age: 46, isMarried: false, friends: [], country: Country.Canada, setup: Setup.Notebook },
+          { name: "Bill Gates", email: "billgates@microsoft.com", age: 60, isMarried: true, friends: [], country: Country.Canada, setup: Setup.Pc },
+          { name: "Elon Musk", email: "ElonMusk@spacex.com", age: 51, isMarried: true, friends: [], country: Country.France, setup: Setup.Pc },
+        ]}
         country={Country.Canada}
         setup={Setup.Notebook}
       />
-      <h1>{job.company}</h1>
     </div>
-  ); 
+  );
 }
 
 export default App;
