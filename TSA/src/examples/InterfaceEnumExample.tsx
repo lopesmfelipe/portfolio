@@ -1,9 +1,9 @@
-interface Props {
+interface Someone {
   name: string;
   email?: string;
   age: number;
   isMarried: boolean;
-  friends: Props[];
+  friends: Someone[];
   country: Country;
   setup: Setup;
 }
@@ -19,7 +19,7 @@ export enum Setup {
   Notebook = "Macbook Pro",
 }
 
-export const Person = (props: Props) => {
+export const Person = (props: Someone) => {
   return (
     <div>
       <h1>Name: {props.name} </h1>
@@ -27,7 +27,7 @@ export const Person = (props: Props) => {
       <h1>Age: {props.age} </h1>
       <h1>This person {props.isMarried ? "is" : "is not"} MARRIED </h1>
       <h3> Friends: </h3>
-      {props.friends.map((friend: Props) => (
+      {props.friends.map((friend: Someone) => (
         <>
           <p> {friend.name} </p>
           <p> {friend.email} </p>
@@ -59,3 +59,33 @@ export const Person = (props: Props) => {
     </div>
   );
 };
+
+
+
+/*
+import "./App.css";
+import { Person, Country, Setup } from "./components/Person";
+
+function App() {
+  
+
+  return (
+    <div className="App">
+      <Person
+        name="Jack Chan"
+        age={26}
+        isMarried={false}
+        friends={[
+          { name: "Steve Jobs", email: "stevejobs@apple.com", age: 46, isMarried: false, friends: [], country: Country.Canada, setup: Setup.Notebook },
+          { name: "Bill Gates", email: "billgates@microsoft.com", age: 60, isMarried: true, friends: [], country: Country.Canada, setup: Setup.Pc },
+          { name: "Elon Musk", email: "ElonMusk@spacex.com", age: 51, isMarried: true, friends: [], country: Country.France, setup: Setup.Pc },
+        ]}
+        country={Country.Canada}
+        setup={Setup.Notebook}
+      />
+    </div>
+  );
+}
+
+export default App;
+*/
