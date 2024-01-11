@@ -15,7 +15,7 @@ export enum Country {
 
 export const Person = (props: Props) => {
 
-  const nu: string = "°";
+  const [name, setName] =useState<string>("°");
 
   return (
     <div>
@@ -25,7 +25,7 @@ export const Person = (props: Props) => {
       <h1>This person {props.isMarried ? "is" : "is not"} MARRIED </h1>
       <h1> Friends: </h1>
       {props.friends.map((friend: string) => (
-        <h1> {friend + " " + nu} </h1>
+        <h1> {friend + " " + name} </h1>
       ))}
 
 
