@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface Props {
   name: string;
   email: string;
@@ -5,6 +7,7 @@ interface Props {
   isMarried: boolean;
   friends: string[];
   country: Country;
+  setup: Setup;
 }
 
 export enum Country {
@@ -13,9 +16,15 @@ export enum Country {
   France = "France",
 }
 
+export enum Setup {
+  Pc = "Pc",
+  Notebook = "Macbook Pro",
+}
+
+
 export const Person = (props: Props) => {
 
-  const [name, setName] =useState<string>("°");
+  const [x, setName] =useState<string>("X");
 
   return (
     <div>
@@ -25,11 +34,12 @@ export const Person = (props: Props) => {
       <h1>This person {props.isMarried ? "is" : "is not"} MARRIED </h1>
       <h1> Friends: </h1>
       {props.friends.map((friend: string) => (
-        <h1> {friend + " " + name} </h1>
+        <h1> {friend + " " + x} </h1>
       ))}
 
 
       <h1> Country: {props.country} </h1>
+      <h1> Setup: {props.setup}</h1>
     </div>
   );
 };
