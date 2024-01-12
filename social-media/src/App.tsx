@@ -1,13 +1,17 @@
-import './App.css'
-impo
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Main } from "./pages/main";
 
 function App() {
-
   return (
     <div>
-      <h1> Hello dude </h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Main />}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
 
-export default App
+export default App;
