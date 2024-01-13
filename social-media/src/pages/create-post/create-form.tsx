@@ -32,7 +32,7 @@ export const CreateForm = () => {
     await addDoc(postsRef, {
       ...data,
       username: user?.displayName,
-      userId: user?.uid,
+      userId: "user?.uid",
     });
   };
 
