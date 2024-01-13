@@ -29,7 +29,7 @@ export const CreateForm = () => {
   const postsRef = collection(db, "posts");
 
   const onCreatePost = async (data: FormInterface) => {
-    await addDoc(postRef, {
+    await addDoc(postsRef, {
       ...data,
       username: user?.displayName,
       userId: user?.uid,
