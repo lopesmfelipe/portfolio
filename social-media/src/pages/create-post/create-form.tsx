@@ -5,7 +5,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-interface CreateFormData {
+interface FormInterface {
   title: string;
   description: string;
 }
@@ -22,17 +22,13 @@ export const CreateForm = () => {
     description: yup.string().required("You must add a description"),
   });
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<CreateFormData>({
+  const { register, handleSubmit, formState: { errors },} = useForm<FormInterface>({
     resolver: yupResolver(schema),
   });
 
   const postsRef = collection(db, "posts");
 
-  const onCreatePost = async (data: CreateFormData) => {
+  const onCreatePost = async (data: FormInterface) => {
     await addDoc(postRef, {
       ...data,
       username: user?.displayName,
